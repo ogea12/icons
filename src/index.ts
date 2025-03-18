@@ -27,3 +27,5 @@ export function createIcon(iconName: string, iconNode: IconNode[]): IconComponen
 
   return Component
 }
+
+export type { IconComponent as Icon, IconNode, IconProps }
