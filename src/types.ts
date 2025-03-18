@@ -39,6 +39,9 @@ type NodeAttributes = ClassAttributes<SVGElement> & ReactSVGAttributes<SVGElemen
  */
 export interface IconProps extends ElementAttributes {
   size?: string | number
+  color?: string
+  primaryColor?: string
+  secondaryColor?: string
 }
 
 /**

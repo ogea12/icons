@@ -15,7 +15,10 @@ interface IconComponentProps extends IconProps {
  * Icon component that renders SVG nodes with configurable properties.
  */
 const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
-  ({ children, color, iconNode, size = 24, className, ...rest }, ref) => {
+  (
+    { children, color, primaryColor, secondaryColor, iconNode, size = 24, className, ...rest },
+    ref
+  ) => {
     return createElement(
       'svg',
       {
@@ -23,6 +26,8 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
         ...defaultAttributes,
         width: size,
         height: size,
+        color: primaryColor || color || 'currentColor',
+        stroke: secondaryColor || color || 'currentColor',
         className: mergeClasses('icon', className),
         ...rest,
       },
