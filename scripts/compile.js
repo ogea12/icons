@@ -1,6 +1,7 @@
 import { camelCase, pascalCase, snakeCase } from 'change-case'
 import { randomUUID } from 'node:crypto'
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { EOL } from 'node:os'
 import { basename, join } from 'node:path'
 import { parse } from 'svg-parser'
 
@@ -51,7 +52,7 @@ icons.forEach((icon) => {
 })
 
 // Generate index file that exports all icon components
-writeFileSync(join(compiledIconsPath, 'index.ts'), iconsIndex.join('\n'))
+writeFileSync(join(compiledIconsPath, 'index.ts'), iconsIndex.join(EOL))
 
 /**
  * Transforms an SVG node into a standardized format for the icon component.
