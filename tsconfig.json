@@ -1,0 +1,8 @@
+{
+  "extends": "@ogea12/tsconfig/tsconfig.package",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx"
+  }
+}

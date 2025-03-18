@@ -1,0 +1,80 @@
+{
+  "name": "@ogea12/icons",
+  "description": "Librairie d'icônes simple et intuitive pour React",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=20.17.0"
+  },
+  "type": "module",
+  "files": [
+    "build"
+  ],
+  "exports": {
+    ".": {
+      "types": "./build/icons/index.d.ts",
+      "import": "./build/icons/index.js",
+      "require": "./build/icons/index.cjs"
+    },
+    "./factory": {
+      "types": "./build/index.d.ts",
+      "import": "./build/index.js",
+      "require": "./build/index.cjs"
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "prebuild": "node ./scripts/compile.js && npm run format && npm run lint:fix",
+    "build": "tsup",
+    "prepublishOnly": "npm run build",
+    "release": "npx release-it"
+  },
+  "homepage": "https://github.com/ogea12/icons#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ogea12/icons.git"
+  },
+  "devDependencies": {
+    "@ogea12/eslint-config": "^1.1.2",
+    "@ogea12/prettier-config": "^1.0.3",
+    "@ogea12/tsconfig": "^1.0.3",
+    "@swc/core": "^1.11.11",
+    "@types/node": "^22.13.10",
+    "@types/react": "^18.3.1",
+    "change-case": "^5.4.4",
+    "eslint": "^9.22.0",
+    "prettier": "^3.5.3",
+    "release-it": "^18.1.2",
+    "svg-parser": "^2.0.4",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1"
+  },
+  "author": "OGEA 12",
+  "license": "MIT",
+  "keywords": [
+    "ogea12",
+    "icons"
+  ],
+  "prettier": "@ogea12/prettier-config",
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore(release): ${version}",
+      "tagAnnotation": "v${version}",
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "releaseName": "v${version}",
+      "web": true
+    }
+  }
+}

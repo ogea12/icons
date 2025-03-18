@@ -1,0 +1,9 @@
+name: checks
+on:
+  - push
+  - pull_request
+jobs:
+  lint:
+    uses: ogea12/.github/.github/workflows/lint.yml@master
+  typecheck:
+    uses: ogea12/.github/.github/workflows/typecheck.yml@master
