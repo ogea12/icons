@@ -19,8 +19,8 @@ Pour utiliser le package, vous devez d'abord l'intégrer dans votre projet.
 ```shell
 npm install @ogea12/icons
 
-# Assurez-vous également d'installer le package suivant
-npm install react
+# Assurez-vous également d'installer les packages suivants
+npm install react react-dom
 ```
 
 ### Utilisation
@@ -36,6 +36,10 @@ export default function Home() {
       {/* Using Tailwind CSS classes for styling */}
       <ChevronDownIcon className="text-slate-700" />
       <BriefcaseIcon className="stroke-slate-400 text-slate-700" size={48} />
+
+      {/* Using properties for styling */}
+      <ChevronDownIcon color="#334155" />
+      <BriefcaseIcon primaryColor="#334155" secondaryColor="#94A3B8" size={48} />
     </>
   )
 }

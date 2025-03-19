@@ -48,6 +48,31 @@ icons.forEach((icon) => {
     `
   )
 
+  writeFileSync(
+    join(compiledIconsPath, `${snakeCaseName}.stories.ts`),
+    `
+    import type { Meta, StoryObj } from '@storybook/react'
+    
+    import { ${pascalCaseName}Icon } from './${snakeCaseName}'
+
+    const meta = {
+      title: 'Icons/${pascalCaseName}Icon',
+      component: ${pascalCaseName}Icon,
+    } satisfies Meta<typeof ${pascalCaseName}Icon>
+
+    export const Default: StoryObj<typeof meta> = {
+      args: {
+        size: 100,
+        color: '#181818',
+        primaryColor: '#181818',
+        secondaryColor: '#BFBFBB',
+      }
+    }
+
+    export default meta
+    `
+  )
+
   iconsIndex.push(`export * from './${snakeCaseName}'`)
 })
 

@@ -29,7 +29,9 @@
     "prebuild": "node ./scripts/compile.js && npm run format && npm run lint:fix",
     "build": "tsup",
     "prepublishOnly": "npm run build",
-    "release": "npx release-it"
+    "release": "npx release-it",
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "storybook build"
   },
   "homepage": "https://github.com/ogea12/icons#readme",
   "repository": {
@@ -37,9 +39,13 @@
     "url": "git+https://github.com/ogea12/icons.git"
   },
   "devDependencies": {
-    "@ogea12/eslint-config": "^1.1.2",
+    "@ogea12/eslint-config": "^1.2.0",
     "@ogea12/prettier-config": "^1.0.3",
     "@ogea12/tsconfig": "^1.0.3",
+    "@storybook/addon-essentials": "^8.6.7",
+    "@storybook/blocks": "^8.6.7",
+    "@storybook/react": "^8.6.7",
+    "@storybook/react-vite": "^8.6.7",
     "@swc/core": "^1.11.11",
     "@types/node": "^22.13.10",
     "@types/react": "^18.3.1",
@@ -47,12 +53,14 @@
     "eslint": "^9.22.0",
     "prettier": "^3.5.3",
     "release-it": "^18.1.2",
+    "storybook": "^8.6.7",
     "svg-parser": "^2.0.4",
     "tsup": "^8.4.0",
     "typescript": "^5.8.2"
   },
   "peerDependencies": {
-    "react": "^18.3.1"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "author": "OGEA 12",
   "license": "MIT",
