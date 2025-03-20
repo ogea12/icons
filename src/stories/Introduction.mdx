@@ -1,0 +1,20 @@
+import { IconGallery, IconItem, Markdown, Meta } from '@storybook/blocks'
+
+import * as Icons from '../icons'
+import ReadMe from '../../README.md?raw'
+
+<Meta title="Introduction" />
+
+<Markdown>{ReadMe}</Markdown>
+
+### Icônes disponibles
+
+Une large variété d'icônes est disponible dans la librairie, et vous trouverez ci-dessous une liste complète de ces icônes pour vous aider à trouver celle qui correspond le mieux à vos besoins.
+
+<IconGallery>
+  {Object.entries(Icons).map(([name, Icon]) => (
+    <IconItem key={name} name={name}>
+      <Icon />
+    </IconItem>
+  ))}
+</IconGallery>
