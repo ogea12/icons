@@ -26,6 +26,7 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "typecheck": "tsc --noEmit",
+    "prepare": "husky",
     "prebuild": "node ./scripts/compile.js && npm run format && npm run lint:fix",
     "build": "tsup",
     "postbuild": "del-cli build/**/*.d.cts",
@@ -41,6 +42,8 @@
     "url": "git+https://github.com/ogea12/icons.git"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@ogea12/commitlint-config": "^1.0.2",
     "@ogea12/eslint-config": "^2.0.2",
     "@ogea12/prettier-config": "^1.0.4",
     "@ogea12/tsconfig": "^1.0.4",
@@ -54,6 +57,7 @@
     "change-case": "^5.4.4",
     "del-cli": "^6.0.0",
     "eslint": "^9.25.1",
+    "husky": "^9.1.7",
     "prettier": "^3.5.3",
     "release-it": "^19.0.1",
     "storybook": "^8.6.12",
