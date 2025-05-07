@@ -18,7 +18,7 @@
 
 Pour utiliser le package, vous devez d'abord l'intégrer dans votre projet.
 
-```shell
+```bash
 npm install @ogea12/icons
 
 # Assurez-vous également d'installer les packages suivants
