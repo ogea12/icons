@@ -32,7 +32,7 @@
     "postbuild": "del-cli build/**/*.d.cts",
     "prepublishOnly": "npm run build",
     "release": "npx release-it",
-    "taze": "npx taze -I",
+    "taze": "npx taze",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },
@@ -62,7 +62,7 @@
     "release-it": "^19.0.2",
     "storybook": "^8.6.12",
     "svg-parser": "^2.0.4",
-    "taze": "^19.0.4",
+    "taze": "^19.1.0",
     "tsup": "^8.4.0",
     "typescript": "^5.8.3"
   },
