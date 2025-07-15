@@ -2,9 +2,9 @@ import type {
   ClassAttributes,
   ForwardRefExoticComponent,
   Key,
-  ReactSVG,
   SVGAttributes as ReactSVGAttributes,
   RefAttributes,
+  SVGElementType,
   SVGProps,
 } from 'react'
 
@@ -13,7 +13,7 @@ import type {
  * uniquely identify this node in the React component tree.
  */
 export interface IconNode extends Omit<NodeAttributes, 'children'> {
-  elementName: keyof ReactSVG
+  elementName: SVGElementType
   children?: IconNode[]
   key: Key
 }
