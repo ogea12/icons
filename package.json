@@ -34,7 +34,10 @@
     "release": "npx release-it",
     "taze": "npx taze",
     "storybook": "storybook dev -p 6006",
-    "storybook:build": "storybook build"
+    "storybook:build": "storybook build",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "test:coverage": "vitest run --coverage"
   },
   "homepage": "https://github.com/ogea12/icons#readme",
   "repository": {
@@ -48,6 +51,7 @@
     "@ogea12/prettier-config": "^1.0.8",
     "@ogea12/tsconfig": "^1.0.9",
     "@storybook/addon-docs": "^9.0.17",
+    "@storybook/addon-vitest": "^9.0.17",
     "@storybook/react-vite": "^9.0.17",
     "@swc/core": "^1.12.14",
     "@types/node": "^22.16.4",
@@ -58,11 +62,15 @@
     "husky": "^9.1.7",
     "prettier": "^3.6.2",
     "release-it": "^19.0.3",
+    "@vitest/browser": "^3.2.4",
+    "@vitest/coverage-v8": "^3.2.4",
+    "playwright": "^1.54.1",
     "storybook": "^9.0.17",
     "svg-parser": "^2.0.4",
     "taze": "^19.1.0",
     "tsup": "^8.5.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
   },
   "peerDependencies": {
     "react": "^19.1.0",

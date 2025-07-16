@@ -1,8 +1,10 @@
 {
   "extends": "@ogea12/tsconfig/tsconfig.package",
   "compilerOptions": {
+    "lib": ["DOM", "ESNext", "DOM.Iterable", "ES2020"],
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "types": ["@vitest/browser/providers/playwright"]
   }
 }
