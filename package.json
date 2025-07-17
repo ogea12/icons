@@ -72,6 +72,9 @@
     "typescript": "^5.8.3",
     "vitest": "^3.2.4"
   },
+  "dependencies": {
+    "markdown-to-jsx": "^7.7.10"
+  },
   "peerDependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
