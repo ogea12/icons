@@ -58,25 +58,14 @@ icons.forEach((icon) => {
     const meta = {
       title: 'Icons/${pascalCaseName}Icon',
       component: ${pascalCaseName}Icon,
-      argTypes: {
-        color: {
-          control: 'color',
-        },
-        primaryColor: {
-          control: 'color',
-          if: { arg: 'color', exists: false },
-        },
-        secondaryColor: {
-          control: 'color',
-          if: { arg: 'color', exists: false },
-        },
-      },
     } satisfies Meta<typeof ${pascalCaseName}Icon>
 
     export const Default: StoryObj<typeof meta> = {
       args: {
         size: 100,
         color: '#181818',
+        primaryColor: '#181818',
+        secondaryColor: '#bfbfbb',
       },
     }
 
