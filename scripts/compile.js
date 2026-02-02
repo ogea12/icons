@@ -16,7 +16,7 @@ const iconsIndex = []
 icons.forEach((icon) => {
   const name = basename(icon, '.svg')
   const snakeCaseName = snakeCase(name)
-  const pascalCaseName = pascalCase(name)
+  const pascalCaseName = pascalCase(name, { mergeAmbiguousCharacters: true })
 
   const content = readFileSync(join(iconsPath, icon), 'utf-8')
   const base64 = Buffer.from(content).toString('base64')
