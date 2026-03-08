@@ -1,7 +1,7 @@
 {
   "name": "@ogea12/icons",
   "description": "Librairie d'icônes simple et intuitive pour React",
-  "version": "2.0.13",
+  "version": "3.0.0",
   "engines": {
     "node": ">=24.14.0"
   },
