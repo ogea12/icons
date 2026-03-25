@@ -46,19 +46,18 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^20.4.3",
-    "@ogea12/commitlint-config": "^2.0.0",
-    "@ogea12/eslint-config": "^3.0.0",
+    "@ogea12/commitlint-config": "^2.0.1",
+    "@ogea12/eslint-config": "^3.0.1",
     "@ogea12/prettier-config": "^2.0.0",
-    "@ogea12/tsconfig": "^2.0.0",
-    "@storybook/addon-docs": "^10.2.16",
-    "@storybook/addon-vitest": "^10.2.16",
-    "@storybook/react-vite": "^10.2.16",
-    "@swc/core": "^1.15.18",
+    "@ogea12/tsconfig": "^2.0.1",
+    "@storybook/addon-docs": "^10.3.3",
+    "@storybook/addon-vitest": "^10.3.3",
+    "@storybook/react-vite": "^10.3.3",
     "@types/node": "^24.12.0",
     "@types/react": "^19.2.14",
     "@types/svg-parser": "^2.0.6",
-    "@vitest/browser-playwright": "^4.0.18",
-    "@vitest/coverage-v8": "^4.0.18",
+    "@vitest/browser-playwright": "^4.1.1",
+    "@vitest/coverage-v8": "^4.1.1",
     "change-case": "^5.4.4",
     "del-cli": "^7.0.0",
     "eslint": "^10.0.3",
@@ -66,15 +65,15 @@
     "playwright": "^1.58.2",
     "prettier": "^3.8.1",
     "release-it": "^19.2.4",
-    "storybook": "^10.2.16",
+    "storybook": "^10.3.3",
     "svg-parser": "^2.0.4",
     "taze": "^19.10.0",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.18"
+    "vitest": "^4.1.1"
   },
   "dependencies": {
-    "markdown-to-jsx": "^9.7.8"
+    "markdown-to-jsx": "^9.7.13"
   },
   "peerDependencies": {
     "react": "^19.2.4",
